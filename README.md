@@ -31,7 +31,52 @@ https://docs.microsoft.com/en-us/azure/developer/terraform/get-started-cloud-she
 ### Configurar un ServicePrincipal para el acceso programatico
 - ```az ad sp create-for-rbac --name terraform-principal --role Contributor```
 - Generar la informacion necesaria para acceder desde terraform
-- ```export ARM_SUBSCRIPTION_ID="8bd2899a-247c-44da-a5d0-999da4e36f83"```
-- ```export ARM_TENANT_ID="aa34c2de-579a-40ba-951d-8f915087a206"```
-- ```export ARM_CLIENT_ID="36f5f4ec-8758-4ea1-a746-de4d3d76fe70"```
-- ```export ARM_CLIENT_SECRET="qqk1ottt7FAUWfKM59HAMvGCd.jiaJ9iBD"```
+```bash
+export ARM_SUBSCRIPTION_ID="8VVVVV-999C-AAAA4-5555D-5555555555"
+export ARM_TENANT_ID="aaaaaaaaaaa-ddddd-sssss-aaaa-888888888"
+export ARM_CLIENT_ID="999999-99999-aaaa-bbbb-88888888"
+export ARM_CLIENT_SECRET="111111111111222222222222222222333"
+```
+
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.1.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~>2.97.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 2.97.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [azurerm_linux_virtual_machine.devops-virtualmachine](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine) | resource |
+| [azurerm_network_interface.devops-networkinterface](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface) | resource |
+| [azurerm_network_security_group.devops-security-group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group) | resource |
+| [azurerm_public_ip.devops-publicip](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip) | resource |
+| [azurerm_resource_group.devops-rg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
+| [azurerm_subnet.devops-subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
+| [azurerm_virtual_network.devops-vnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_proyecto"></a> [proyecto](#input\_proyecto) | Nombre del proyecto a implementar | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | Valores de los tags para los recursos | `map(string)` | n/a | yes |
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
