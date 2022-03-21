@@ -39,6 +39,10 @@ export ARM_CLIENT_SECRET="111111111111222222222222222222333"
 ```
 
 
+## Important 
+Si el archivo ```variables.tf``` o ```locals.tf``` no funciona correctamente, estos se encuentran en la carpeta ```../commons```
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
