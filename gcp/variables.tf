@@ -1,5 +1,5 @@
 variable "tags" {
-  type        = map(string)
+  type        = list(string)
   description = "Valores de los tags para los recursos"
 }
 
